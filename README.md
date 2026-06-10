@@ -1,3 +1,13 @@
+## Interactive Tools Preview
+
+| Website Audit | ROI Calculator |
+|--------------|---------------|
+| ![](screenshots/audit-calculator.png) | ![](screenshots/roi-calculator.png) |
+
+| Pricing Calculator | Lead Qualification |
+|-------------------|-------------------|
+| ![](screenshots/pricing-calculator.png) | ![](screenshots/lead-qualification.png) |
+
 <div align="center">
   <img src="https://via.placeholder.com/150x150?text=AI+Agency+Kit" alt="AI Agency Starter Kit Logo" width="120" />
 
