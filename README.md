@@ -22,6 +22,15 @@ The AI automation space is exploding, yet most newcomers waste hundreds of hours
 We built the **AI Agency Starter Kit** to eliminate this administrative overhead. It moves beyond generic advice and provides the exact documents, templates, frameworks, and interactive web tools you need to close deals and deliver value. Our goal? To **standardize quality** and **accelerate time-to-market** for AI builders worldwide.
 
 ---
+## Interactive Tools Preview
+
+| Website Audit | ROI Calculator |
+|--------------|---------------|
+| ![](screenshots/audit-calculator.png) | ![](screenshots/roi-calculator.png) |
+
+| Pricing Calculator | Lead Qualification |
+|-------------------|-------------------|
+| ![](screenshots/pricing-calculator.png) | ![](screenshots/lead-qualification.png) |
 
 ## ✨ Features & Architecture
 
