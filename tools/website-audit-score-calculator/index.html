@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Audit Score Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Website Audit Calculator</h1>
+            <p>Score your prospect's website out of 100 to generate actionable insights.</p>
+        </header>
+
+        <form id="audit-form" class="calculator-form">
+            <div class="input-group">
+                <label for="design">Design & Aesthetics (0-15)</label>
+                <input type="number" id="design" name="design" min="0" max="15" required placeholder="e.g. 10">
+                <span class="error-message" id="design-error">Must be between 0 and 15</span>
+            </div>
+
+            <div class="input-group">
+                <label for="ux">User Experience (UX) (0-15)</label>
+                <input type="number" id="ux" name="ux" min="0" max="15" required placeholder="e.g. 12">
+                <span class="error-message" id="ux-error">Must be between 0 and 15</span>
+            </div>
+
+            <div class="input-group">
+                <label for="mobile">Mobile Responsiveness (0-20)</label>
+                <input type="number" id="mobile" name="mobile" min="0" max="20" required placeholder="e.g. 15">
+                <span class="error-message" id="mobile-error">Must be between 0 and 20</span>
+            </div>
+
+            <div class="input-group">
+                <label for="seo">Search Engine Optimization (SEO) (0-15)</label>
+                <input type="number" id="seo" name="seo" min="0" max="15" required placeholder="e.g. 8">
+                <span class="error-message" id="seo-error">Must be between 0 and 15</span>
+            </div>
+
+            <div class="input-group">
+                <label for="performance">Page Performance/Speed (0-15)</label>
+                <input type="number" id="performance" name="performance" min="0" max="15" required placeholder="e.g. 10">
+                <span class="error-message" id="performance-error">Must be between 0 and 15</span>
+            </div>
+
+            <div class="input-group">
+                <label for="conversion">Conversion Optimization (0-20)</label>
+                <input type="number" id="conversion" name="conversion" min="0" max="20" required placeholder="e.g. 5">
+                <span class="error-message" id="conversion-error">Must be between 0 and 20</span>
+            </div>
+
+            <button type="submit" class="btn-primary">Calculate Audit Score</button>
+        </form>
+
+        <section id="results" class="results-panel hidden">
+            <h2>Audit Results</h2>
+            <div class="score-display">
+                <span id="total-score" class="score">0</span>
+                <span class="max-score">/ 100</span>
+            </div>
+            <div class="grade" id="grade-badge">Grade: -</div>
+            <div class="insights">
+                <h3>Key Takeaways for Prospect:</h3>
+                <p id="insight-text"></p>
+            </div>
+            <button id="reset-btn" class="btn-secondary">New Audit</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

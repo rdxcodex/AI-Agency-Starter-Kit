@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Qualification Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Lead Qualification Score</h1>
+            <p>Score inbound leads to determine if they are worth hopping on a discovery call.</p>
+        </header>
+
+        <form id="lead-form" class="calculator-form">
+            <div class="question-card">
+                <label>1. Company Size / Revenue</label>
+                <select id="q1" required>
+                    <option value="" disabled selected>Select an option...</option>
+                    <option value="10">Under $500k / Solo (10 pts)</option>
+                    <option value="20">$500k - $2M / 2-10 emp (20 pts)</option>
+                    <option value="30">$2M - $10M / 11-50 emp (30 pts)</option>
+                    <option value="40">$10M+ / 50+ emp (40 pts)</option>
+                </select>
+            </div>
+
+            <div class="question-card">
+                <label>2. Budget Expectation</label>
+                <select id="q2" required>
+                    <option value="" disabled selected>Select an option...</option>
+                    <option value="5">Under $2,000 (5 pts)</option>
+                    <option value="15">$2,000 - $5,000 (15 pts)</option>
+                    <option value="30">$5,000 - $15,000 (30 pts)</option>
+                    <option value="40">$15,000+ (40 pts)</option>
+                </select>
+            </div>
+
+            <div class="question-card">
+                <label>3. Urgency / Timeline</label>
+                <select id="q3" required>
+                    <option value="" disabled selected>Select an option...</option>
+                    <option value="5">Just exploring / > 6 months (5 pts)</option>
+                    <option value="10">Within 3-6 months (10 pts)</option>
+                    <option value="20">Within 1-3 months (20 pts)</option>
+                    <option value="30">ASAP / This month (30 pts)</option>
+                </select>
+            </div>
+
+            <div class="question-card">
+                <label>4. Decision Maker Status</label>
+                <select id="q4" required>
+                    <option value="" disabled selected>Select an option...</option>
+                    <option value="0">Intern / Low-level employee (0 pts)</option>
+                    <option value="10">Manager (must consult boss) (10 pts)</option>
+                    <option value="30">C-Suite / Founder / Owner (30 pts)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-primary">Calculate Lead Score</button>
+        </form>
+
+        <section id="results" class="results-panel hidden">
+            <div class="score-circle">
+                <span id="final-score">0</span>
+                <span class="max">/ 140</span>
+            </div>
+            
+            <h2 id="lead-status">Status</h2>
+            <p id="action-plan" class="action-text"></p>
+            
+            <button id="reset-btn" class="btn-secondary">Score Another Lead</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

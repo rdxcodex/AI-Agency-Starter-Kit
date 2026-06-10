@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Pricing Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Agency Pricing Calculator</h1>
+            <p>Determine your internal project costs and calculate profitable package pricing.</p>
+        </header>
+
+        <form id="pricing-form" class="calculator-form">
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="hours-estimated">Estimated Project Hours</label>
+                    <input type="number" id="hours-estimated" min="1" required placeholder="e.g. 40">
+                </div>
+                
+                <div class="input-group">
+                    <label for="hourly-rate">Your Blended Hourly Rate ($)</label>
+                    <input type="number" id="hourly-rate" min="1" required placeholder="e.g. 150">
+                    <span class="hint">What you effectively want to earn per hour.</span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="software-costs">Software / API Costs ($)</label>
+                    <input type="number" id="software-costs" min="0" required placeholder="e.g. 100">
+                    <span class="hint">Make.com, OpenAI API, etc. for this project.</span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="contractor-costs">Contractor / Outsourcing Costs ($)</label>
+                    <input type="number" id="contractor-costs" min="0" required placeholder="e.g. 500">
+                </div>
+            </div>
+
+            <div class="input-group full-width">
+                <label for="margin-target">Target Profit Margin (%)</label>
+                <input type="number" id="margin-target" min="0" max="100" required placeholder="e.g. 30">
+            </div>
+
+            <button type="submit" class="btn-primary">Calculate Pricing Options</button>
+        </form>
+
+        <section id="results" class="results-panel hidden">
+            <h2>Recommended Package Pricing</h2>
+            
+            <div class="pricing-tiers">
+                <div class="tier standard">
+                    <h3>Base Price</h3>
+                    <p class="desc">Covers costs + target margin.</p>
+                    <div class="price" id="base-price">$0</div>
+                </div>
+
+                <div class="tier premium highlight">
+                    <h3>Value-Based Price</h3>
+                    <p class="desc">Base price + 50% premium for high ROI.</p>
+                    <div class="price" id="value-price">$0</div>
+                    <div class="badge">Recommended</div>
+                </div>
+            </div>
+
+            <div class="breakdown">
+                <h3>Cost Breakdown</h3>
+                <ul>
+                    <li>Labor Cost: <span id="breakdown-labor">$0</span></li>
+                    <li>Hard Costs (Software + Contractors): <span id="breakdown-hard">$0</span></li>
+                    <li>Total Cost of Delivery (COGS): <span id="breakdown-cogs">$0</span></li>
+                    <li>Target Profit Amount: <span id="breakdown-profit">$0</span></li>
+                </ul>
+            </div>
+            
+            <button id="reset-btn" class="btn-secondary">Calculate Another Project</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

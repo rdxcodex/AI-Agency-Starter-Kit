@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation ROI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>AI Automation ROI Calculator</h1>
+            <p>Show your clients exactly how much money and time your automation saves them.</p>
+        </header>
+
+        <div class="calculator-grid">
+            <form id="roi-form" class="calculator-form">
+                <div class="input-section">
+                    <h3>Current Process</h3>
+                    <div class="input-group">
+                        <label for="hours-per-week">Hours Spent Per Week on Task</label>
+                        <input type="number" id="hours-per-week" min="1" required placeholder="e.g. 20">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="hourly-rate">Average Hourly Wage of Employee ($)</label>
+                        <input type="number" id="hourly-rate" min="1" required placeholder="e.g. 25">
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <h3>AI Solution</h3>
+                    <div class="input-group">
+                        <label for="automation-cost">Monthly Cost of Automation Tool/Service ($)</label>
+                        <input type="number" id="automation-cost" min="0" required placeholder="e.g. 500">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="efficiency">Estimated Efficiency Gain (%)</label>
+                        <input type="number" id="efficiency" min="1" max="100" required placeholder="e.g. 80">
+                        <span class="hint">How much of this task will the AI handle?</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Calculate ROI</button>
+            </form>
+
+            <section id="results" class="results-panel">
+                <div class="result-card primary">
+                    <h3>Monthly Savings</h3>
+                    <div class="value positive" id="monthly-savings">$0</div>
+                </div>
+                
+                <div class="result-card">
+                    <h3>Annual Savings</h3>
+                    <div class="value positive" id="annual-savings">$0</div>
+                </div>
+                
+                <div class="result-card">
+                    <h3>Hours Saved Annually</h3>
+                    <div class="value" id="hours-saved">0 hrs</div>
+                </div>
+                
+                <div class="result-card highlight">
+                    <h3>ROI (Return on Investment)</h3>
+                    <div class="value" id="roi-percentage">0%</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
